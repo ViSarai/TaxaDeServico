@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#DDA553"
+    android:scrollbarStyle="insideInset"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundTint="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29"
+        app:srcCompat="@drawable/gorjeta" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:backgroundTint="#FF9800"
+        android:foregroundTint="#FF9800"
+        android:textColorHint="#DFFF9800"
+        app:boxBackgroundColor="#FF9800"
+        app:boxStrokeColor="#FF9800"
+        app:boxStrokeErrorColor="#FF9800"
+        app:helperTextTextColor="#FF9800"
+        app:hintTextColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:passwordToggleTint="#FF9800"
+        app:placeholderTextColor="#FF9800"
+        app:prefixTextColor="#FF9800"
+        app:startIconTint="#FF9800"
+        app:suffixTextColor="#FF9800">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textConta"
+            style="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF9800"
+            android:foregroundTint="#FF9800"
+            android:hint="Digete o valor da conta."
+            android:inputType="numberDecimal"
+            android:shadowColor="#FF9800"
+            android:textColorHighlight="#FF9800"
+            android:textColorLink="#FF9800" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarEscala"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="29dp"
+        android:backgroundTint="#FF9800"
+        android:max="100"
+        android:progressTint="#FF9800"
+        android:thumbTint="#FF9800"
+        android:thumbTintMode="src_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <TextView
+        android:id="@+id/textSeekBar"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:text="0%"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarEscala"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <TextView
+        android:id="@+id/textGorjeta"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#FFD470"
+        android:text="R$ 0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/seekBarEscala"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarEscala" />
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:background="#ffd470"
+        android:text="R$ 0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textGorjeta" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Gorjeta"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textGorjeta"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSeekBar" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:text="TOTAL"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textTotal"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/btnLimpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="291dp"
+        android:backgroundTint="#E98C28"
+        android:onClick="btnLimpar"
+        android:text="Limpar "
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
